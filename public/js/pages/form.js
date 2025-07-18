@@ -197,7 +197,7 @@ for (const [utmKey, fieldName] of Object.entries(utms)) {
 
     
     if (!url || url == "") {
-        url = "https://pay.hotmart.com/G100576922A?checkoutMode=10&off=rosipfd1";
+        url = "https://pay.hotmart.com/G100576922A?off=6mshjz42&checkoutMode=10";
     } 
 
     const rastreio = url +
@@ -214,14 +214,12 @@ for (const [utmKey, fieldName] of Object.entries(utms)) {
 
     fetch("https://fabiocostaonline.activehosted.com/proc.php", {
         method: "POST",
-        body: new FormData(document.getElementById("_form_29_")),
+        body: new FormData(document.getElementById("_form_1_")),
         mode: "no-cors"
+
+    }).then(() => {
+        window.location.href = rastreio;
     });
-
-
-    window.location.href = rastreio;
-
-    return false;
   }
 });
 
